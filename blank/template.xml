@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<template>
+	<version>1.0</version>
+	<name>blank</name>
+	<name_friendly>Blank Slate</name_friendly>
+	<description>This is a bare template with. Only the loader and blueprints views will have pre-written code.</description>
+	<author>The Zesty Team</author>
+	<link>http://www.gozesty.com</link>
+	<image src="/media/template_image.png" />
+	<sort>10</sort>
+	
+	
+	<views>
+		<!-- loader -->
+		<view type="loader" name="loader" file="/views/loader.tpl" />	
+		
+		<!-- header	
+		<view type="snippet" name="header" file="/views/header.tpl" />	
+		
+		
+		<view type="snippet" name="footer" file="/views/footer.tpl" />
+		 -->
+	</views>
+	
+	<blueprints>
+		<blueprint system="home-page" locked="1" />
+		
+		<!-- basic page blueprint -->
+		<blueprint system="basic-page" locked="1" />
+		
+		<!-- blog blueprint -->
+		<blueprint system="blog" deactivated="" />
+		
+		<!-- basic blog blueprint -->
+		<blueprint system="blog_basic" deactivated="" />
+		
+	</blueprints>
+	
+	<!-- clippings -->	
+	<clippings>
+		<clipping name="site_name" name_friendly="Site Name" value="Edit Site Name in Content Clippings" required="0" datatype="text" sort="1" locked="1" />
+		
+		<clipping name="logo" name_friendly="Site Logo" value="0" required="0" datatype="images" sort="2" locked="1" />
+		
+		<clipping name="footer_text" name_friendly="Footer Text" value="Footer text can be updated in Content Clippings" required="0" datatype="text" sort="3" locked="0" />
+	</clippings>
+	
+
+	<!-- head files -->	
+	<head>
+		<item nodeName="html" isLocked="1" active="1" value="html5" />
+		<item type="meta" nodeName="meta" isLocked="0" active="1" sort="1">
+			<http-equiv>Content-Type</http-equiv>
+			<content>text/html;charset=utf-8</content>
+		</item>
+		<item type="meta" nodeName="meta" isLocked="0" active="1" sort="1">
+			<name>viewport</name>
+			<content>width=device-width, initial-scale=1.0</content>
+		</item>
+		
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reset" sort="2" css_file="/resources/css/reset.css" less_file="/resources/less/reset.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie7.css" sort="3" ie="ie7" file="/resources/css/ie7.css" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie8.css" sort="4" ie="ie8" file="/resources/css/ie8.css" />
+		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="main.js" sort="6" file="/resources/js/main.js" />
+		
+	</head>
+	
+	<settings>
+		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1" value="0"  />
+		<!--<setting category="general" name="site_protocol" label="HTTPS on?" type="checkbox" options="http,https" />-->
+		<!--<setting category="general" name="preferred_domain_prefix" label="Always prepend WWW to my domain?" type="checkbox" options="0,1" />-->
+		
+		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2" value="1"  />
+		<setting category="developer" name="tips" label="Show Zesty Tips?" type="checkbox" options="0,1" value="1"   />
+	
+	</settings>
+
+</template>
