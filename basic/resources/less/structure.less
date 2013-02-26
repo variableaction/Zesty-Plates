@@ -3,21 +3,21 @@
  *==================*/
 
 .structure{ 
-	width:990px; 
+	max-width:990px; 
 	margin:0px auto; 
 
 } // end of structure
 
 /* header container */
-.headerContainer{
+.header-container{
 	
 	.header{
 		background: #aaa; 
-		height: 100px;
 		
 		.logo img{
 			padding: 10px;
-			
+			max-height: 90px;
+			max-width: 60%;
 		}
 		
 	} // end of .header
@@ -27,12 +27,11 @@
 
 
 /* navigation container */
-.navigationContainer{
+.navigation-container{
 	clear: both;
 	
 	.navigation { 
 		background:#ccc;
-	
 	
 	} // end of .navigation
 	
@@ -53,6 +52,7 @@ ul#nav {
 		margin:0px; 
 		padding:0px; 
 		line-height:0px;
+		outline: 0;
 		
 		a { 
 			text-decoration: none; 
@@ -65,7 +65,7 @@ ul#nav {
 			padding: 0px 33px; 
 			border-right: 1px #ccc solid; 
 			margin:0px;
-			
+			outline: 0;
 		
 		} // end of a
 		
@@ -85,7 +85,7 @@ ul#nav {
 
 
 /* heading container */
-.headingContainer{
+.heading-container{
 	clear: both;
 	
 	.heading{
@@ -100,7 +100,7 @@ ul#nav {
 
 
 /* content container */
-.contentContainer {
+.content-container {
 	clear: both;
 	
 	.content{
@@ -115,13 +115,14 @@ ul#nav {
 
 
 /* footer container */
-.footerContainer {
+.footer-container {
 	clear: both;
 	
 	.footer{ 
 		min-height: 80px;
 		background: #eee;
-		
+		text-align: center;
+		padding: 10px 0px;
 		
 	} // end of .footer
 	
@@ -135,6 +136,10 @@ ul#nav {
 	font-size: 11px; 
 	color: #999; 
 	padding-top: 30px; 
+}
+
+.page404 {
+	text-align: center;
 }
 
 // clear

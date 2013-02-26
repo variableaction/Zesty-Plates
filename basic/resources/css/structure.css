@@ -2,38 +2,99 @@
  * Primary Elements *
  *==================*/
 
-.structure{ width:990px; margin:0px auto; }
+.structure {
+	max-width:990px;
+	margin:0 auto;
+}
 
-/* header container */
-.headerContainer{ clear:both }
-.header{ background: #aaa; height: 100px; }
-.logo img{ padding: 10px;}
-/* navigation container */
-.navigationContainer{  clear: both; }
-.navigation{ background:#ccc; }
+.header-container .header {
+	background:#aaa;
+}
 
-/* heading container */
-.headingContainer{  clear: both; }
-.heading{ background: #aaa; min-height: 150px }
+.header-container .header .logo img {
+	padding:10px;
+	max-height:90px;
+	max-width:60%;
+}
 
-/* content container */
-.contentContainer{ clear: both; }
-.content{  background: #f7f7f7; min-height:400px;  }
+.navigation-container {
+	clear:both;
+}
 
-/* footer container */
-.footerContainer{ clear: both;}
-.footer{ min-height: 80px; background: #eee }
+.navigation-container .navigation {
+	background:#ccc;
+}
 
-/* footer copyright */
-.copyright{ clear: both; text-align: center; font-size: 10px; color: #999; padding-top: 30px; }
+ul#nav {
+	margin:0;
+	padding:0;
+	line-height:0;
+}
 
+ul#nav li {
+	display:inline-table;
+	list-style:none;
+	margin:0;
+	padding:0;
+	line-height:0;
+	outline:0;
+}
 
-/*==================*
- * Primary Elements *
- *==================*/
- 
-/* zesty created {{navigation}} */
-ul#nav { margin:0px; padding:0px;  line-height:0px }
-ul#nav li{ display: inline-table; list-style:none;  margin:0px; padding:0px; line-height:0px}
-ul#nav li a{ text-decoration: none; display:block; height:36px; line-height:36px; color: #fff; font-size: 12px; background: #eee; color: #333; padding: 0px 33px; border-right: 1px #ccc solid; margin:0px;}
-ul#nav li ul{ display: none;}
+ul#nav li a {
+	text-decoration:none;
+	display:block;
+	height:36px;
+	line-height:36px;
+	font-size:12px;
+	background:#eee;
+	color:#333;
+	padding:0 33px;
+	border-right:1px #ccc solid;
+	margin:0;
+	outline:0;
+}
+
+ul#nav li ul {
+	display:none;
+}
+
+.heading-container {
+	clear:both;
+}
+
+.heading-container .heading {
+	background:#aaa;
+	min-height:150px;
+}
+
+.content-container {
+	clear:both;
+}
+
+.content-container .content {
+	background:#f7f7f7;
+	min-height:400px;
+}
+
+.footer-container {
+	clear:both;
+}
+
+.footer-container .footer {
+	min-height:80px;
+	background:#eee;
+	text-align:center;
+	padding:10px 0;
+}
+
+.copyright {
+	clear:both;
+	text-align:center;
+	font-size:11px;
+	color:#999;
+	padding-top:30px;
+}
+
+.clear,.floatfix {
+	clear:both;
+}

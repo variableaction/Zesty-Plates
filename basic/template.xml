@@ -3,12 +3,11 @@
 	<version>1.0</version>
 	<name>basic</name>
 	<name_friendly>Basic</name_friendly>
-	<description>This template include basic CSS/HTML markup. Basic files like header, footer, and the loader are included. The HTML5 Shiv (shiv.js) is included to ensure HTML5 elements render properly in older browsers. </description>
+	<description>This template includes basic CSS/HTML markup. Basic files like header, footer, and the loader are included. The HTML5 Shiv (shiv.js) is included to ensure HTML5 elements render properly in older browsers. </description>
 	<author>The Zesty Team</author>
 	<link>http://www.gozesty.com</link>
-	<image src="/media/template_image.png" />
-	<!--<flag> This is a test </flag>-->
-	<sort>1</sort>
+	<image src="https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-zesty-basic.png" />
+	<sort>2</sort>
 	<less>true</less>
 	
 	<!-- views -->
@@ -22,32 +21,59 @@
 		<!-- footer -->
 		<view type="snippet" name="footer" file="/views/footer.tpl" />
 		
+		<view type="404" name="404-page" file="/views/404.tpl" />
+		
 	</views>
 	
+	<homepage>
+		<fields>
+			<field name="title" name_friendly="Lead in Title" datatype="text" required="1">
+				<![CDATA[Homepage]]>
+			</field>
+			<field name="content" name_friendly="Intro Text" datatype="wysiwyg_advanced">
+				<![CDATA[<p>This is your awesome content</p>]]>
+			</field>
+			<field name="image" name_friendly="Main Image" datatype="images" list="1" >
+				<![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-homepage.png]]>
+			</field>
+		</fields>
+		
+		<view file="/views/homepage.tpl" />
+	</homepage>
 	
 	<!-- blueprint -->
-	<blueprints>
-		<blueprint system="home-page" locked="true" />
-		
+	<blueprints>		
 		<!-- basic page blueprint -->
-		<blueprint system="basic-page" />
+		<blueprint system="basic-page" deactivated="" />
+		
+		<blueprint system="contact" deactivated="" />
 		
 		<!-- blog blueprint -->
 		<blueprint system="blog" deactivated="" />
 		
 		<!-- basic blog blueprint -->
-		<blueprint system="blog_basic" deactivated="" />
+		<blueprint system="blog-basic" deactivated="" />
+		
+		<blueprint system="services" deactivated="" />
 		
 		
 	</blueprints>
 	
 	<!-- clippings -->	
 	<clippings>
-		<clipping name="site_name" name_friendly="Site Name" value="Zesty Basic Recipe" required="0" datatype="text" sort="1" locked="1" />
+		<clipping name="site_name" name_friendly="Site Name" required="0" datatype="text" sort="1" locked="1">
+			<![CDATA[Zesty Basic Recipe]]>
+		</clipping>
 		
-		<clipping name="logo" name_friendly="Site Logo" value="/media/zesty-basic-logo.png" required="0" datatype="images" sort="2" locked="1" />
+		<clipping name="logo" name_friendly="Site Logo" required="0" datatype="images" sort="2" locked="1">
+			<![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-zesty-basic-logo.png]]>
+		</clipping>
 		
-		<clipping name="footer_text" name_friendly="Footer Text" value="Footer text can be updated in Content Clippings" required="0" datatype="text" sort="3" locked="0" />
+		<clipping name="footer_text" name_friendly="Footer Text" required="0" datatype="text" sort="3" locked="0">
+			<![CDATA[Footer text can be updated in Content Clippings]]>
+		</clipping>
+		
+		<clipping name="google_publisher_id" name_friendly="Google Publisher ID" required="0" datatype="text" sort="4" locked="0" />
 	</clippings>
 	
 
@@ -63,26 +89,23 @@
 			<content>width=device-width, initial-scale=1.0</content>
 		</item>
 		
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="mixins" sort="3" less_file="/resources/less/mixins.less" />
 		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reset" sort="2" css_file="/resources/css/reset.css" less_file="/resources/less/reset.less" />
-		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="structure" sort="4"  css_file="/resources/css/structure.css" less_file="/resources/less/structure.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="basic" sort="4"  css_file="/resources/css/structure.css" less_file="/resources/less/structure.less" />
 		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="typography" sort="3" css_file="/resources/css/typography.css" less_file="/resources/less/typography.less" />
-		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reponsive" sort="5"  css_file="/resources/css/reponsive.css" less_file="/resources/less/reponsive.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="responsive" sort="5"  css_file="/resources/css/responsive.css" less_file="/resources/less/responsive.less" />
 		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie7.css" sort="6" ie="ie7" file="/resources/css/ie7.css" />
 		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie8.css" sort="7" ie="ie8" file="/resources/css/ie8.css" />
-		
+
 		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="main.js" sort="9" file="/resources/js/main.js" />
 		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="shiv.js" sort="10" file="/resources/js/shiv.js" />
 		
 	</head>
 	
 	<settings>
-		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1" value="0"  />
-		<!--<setting category="general" name="site_protocol" label="HTTPS on?" type="checkbox" options="http,https" />-->
-		<!--<setting category="general" name="preferred_domain_prefix" label="Always prepend WWW to my domain?" type="checkbox" options="0,1" />-->
-		
-		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2" value="1"  />
-		<setting category="developer" name="tips" label="Show Zesty Tips?" type="checkbox" options="0,1" value="1"   />
-	
+		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1"><![CDATA[1]]></setting>
+		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2"><![CDATA[1]]></setting>
+		<setting category="general" name="use_z_grid" label="Include Zesty Grid CSS for responsive layout?" type="checkbox" options="0,1"><![CDATA[1]]></setting>
 	</settings>
 
 </template>

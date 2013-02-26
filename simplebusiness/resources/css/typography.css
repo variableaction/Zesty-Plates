@@ -1,0 +1,63 @@
+/*
+=================================================
+	Basic text sizing
+=================================================
+	Set your main font size for paragraph
+
+	Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+=================================================
+	Proportions based on typographic scale
+	14, 16, 18, 21, 24, 32, 48
+=================================================
+*/
+
+body { 
+	font-size: 87.5%;
+	line-height: 1.5;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.4285714285714284em;
+  line-height: 1.3125em;
+}
+
+h2 {
+  font-size: 2.2857142857142856em;
+  line-height: 1.96875em;
+}
+
+h3 {
+  font-size: 1.7142857142857142em;
+  line-height: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+h5 {
+  font-size: 1.2857142857142858em;
+  line-height: 2.3333333333333335em;
+}
+
+h6 {
+  font-size: 1.1428571428571428em;
+  line-height: 2.625em;
+}
+
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 1.5em;
+}

@@ -6,44 +6,60 @@
 	<description>This is a bare template with. Only the loader and blueprints views will have pre-written code.</description>
 	<author>The Zesty Team</author>
 	<link>http://www.gozesty.com</link>
-	<image src="/media/template_image.png" />
-	<sort>10</sort>
-	
+	<image src="https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-zesty-blank.png" />
+	<sort>1</sort>
+	<less>true</less>
 	
 	<views>
 		<!-- loader -->
-		<view type="loader" name="loader" file="/views/loader.tpl" />	
+		<view type="loader" name="loader" file="/views/loader.tpl" />
 		
-		<!-- header	
-		<view type="snippet" name="header" file="/views/header.tpl" />	
-		
-		
-		<view type="snippet" name="footer" file="/views/footer.tpl" />
-		 -->
+		<view type="404" name="404-page" file="/views/404.tpl" />
 	</views>
 	
 	<blueprints>
-		<blueprint system="home-page" locked="1" />
 		
 		<!-- basic page blueprint -->
-		<blueprint system="basic-page" locked="1" />
+		<blueprint system="basic-page" deactivated="" />
 		
 		<!-- blog blueprint -->
 		<blueprint system="blog" deactivated="" />
 		
 		<!-- basic blog blueprint -->
-		<blueprint system="blog_basic" deactivated="" />
+		<blueprint system="blog-basic" deactivated="" />
 		
 	</blueprints>
 	
 	<!-- clippings -->	
 	<clippings>
-		<clipping name="site_name" name_friendly="Site Name" value="Edit Site Name in Content Clippings" required="0" datatype="text" sort="1" locked="1" />
+		<clipping name="site_name" name_friendly="Site Name" required="0" datatype="text" sort="1" locked="1">
+			<![CDATA[Edit Site Name in Content Clippings]]>
+		</clipping>
 		
-		<clipping name="logo" name_friendly="Site Logo" value="0" required="0" datatype="images" sort="2" locked="1" />
+		<clipping name="logo" name_friendly="Site Logo" required="0" datatype="images" sort="2" locked="1" />
 		
-		<clipping name="footer_text" name_friendly="Footer Text" value="Footer text can be updated in Content Clippings" required="0" datatype="text" sort="3" locked="0" />
+		<clipping name="footer_text" name_friendly="Footer Text" required="0" datatype="text" sort="3" locked="0">
+			<![CDATA[Footer text can be updated in Content Clippings]]>
+		</clipping>
+		
+		<clipping name="google_publisher_id" name_friendly="Google Publisher ID" required="0" datatype="text" sort="4" locked="0" />
 	</clippings>
+	
+	<homepage>
+		<fields>
+			<field name="title" name_friendly="Lead in Title" datatype="text" required="1">
+				<![CDATA[Homepage]]>
+			</field>
+			<field name="content" name_friendly="Intro Text" datatype="wysiwyg_advanced">
+				<![CDATA[<p>This is your awesome content</p>]]>
+			</field>
+			<field name="image" name_friendly="Main Image" datatype="images" list="1" >
+				<![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-homepage1.png]]>
+			</field>
+		</fields>
+		
+		<view file="/views/homepage.tpl" />
+	</homepage>
 	
 
 	<!-- head files -->	
@@ -58,7 +74,9 @@
 			<content>width=device-width, initial-scale=1.0</content>
 		</item>
 		
-		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reset" sort="2" css_file="/resources/css/reset.css" less_file="/resources/less/reset.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="mixins" sort="2" less_file="/resources/less/mixins.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reset" sort="2" css_file="/resources/css/reset.css" less_file="/resources/less/reset.css" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="blank" sort="3" css_file="/resources/css/main.css" less_file="/resources/less/main.css" />
 		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie7.css" sort="3" ie="ie7" file="/resources/css/ie7.css" />
 		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie8.css" sort="4" ie="ie8" file="/resources/css/ie8.css" />
 		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="main.js" sort="6" file="/resources/js/main.js" />
@@ -66,13 +84,9 @@
 	</head>
 	
 	<settings>
-		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1" value="0"  />
-		<!--<setting category="general" name="site_protocol" label="HTTPS on?" type="checkbox" options="http,https" />-->
-		<!--<setting category="general" name="preferred_domain_prefix" label="Always prepend WWW to my domain?" type="checkbox" options="0,1" />-->
-		
-		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2" value="1"  />
-		<setting category="developer" name="tips" label="Show Zesty Tips?" type="checkbox" options="0,1" value="1"   />
-	
+		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1"><![CDATA[1]]></setting>
+		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2"><![CDATA[1]]></setting>
+		<setting category="general" name="use_z_grid" label="Include Zesty Grid CSS for responsive layout?" type="checkbox" options="0,1"><![CDATA[1]]></setting>
 	</settings>
 
 </template>

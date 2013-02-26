@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<template>
+	<version>1.0</version>
+	<name>landingpage</name>
+	<name_friendly>Landing Page</name_friendly>
+	<description></description>
+	<author>The Zesty Team</author>
+	<link>http://www.gozesty.com</link>
+	<image src="https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-template-image.png" />
+	<!--<flag> This is a test </flag>-->
+	<sort>4</sort>
+	<less>true</less>
+	
+	<!-- views -->
+	<views>
+		<!-- loader -->
+		<view type="loader" name="loader" file="/views/loader.tpl" />	
+		
+		<!-- header -->	
+		<view type="snippet" name="header" file="/views/header.tpl" />	
+		
+		<!-- footer -->
+		<view type="snippet" name="footer" file="/views/footer.tpl" />
+		
+		<!-- 404 page -->
+		<view type="404" name="404-page" file="/views/404.tpl" />
+		
+	</views>
+	
+	
+	<!-- blueprint -->
+	<blueprints>
+	
+		<blueprint system="landing-page" locked="true" />
+	
+	</blueprints>
+	
+	<!-- clippings -->	
+	<clippings>
+		<clipping name="site_name" name_friendly="Site Name" required="0" datatype="text" sort="1" locked="1">
+			<![CDATA[Landing Page]]>
+		</clipping>
+		
+		<clipping name="logo" name_friendly="Site Logo" required="0" datatype="images" sort="2" locked="1">
+			<![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-nice-landing-page-title.png]]>
+		</clipping>
+		
+		<clipping name="contact_label" name_friendly="Contact Form Text" required="0" datatype="text" sort="3" locked="0">
+			<![CDATA[Join our mailing list!]]>
+		</clipping>
+		
+		<clipping name="social_icons" name_friendly="Social Icon Set" required="0" datatype="images" sort="4" locked="0">
+			<![CDATA[/media/grey-social-icons.png]]>
+		</clipping>
+	</clippings>
+	
+
+	<!-- head files -->	
+	<head>
+		<item nodeName="html" isLocked="1" active="1" value="html5" />
+		<item type="meta" nodeName="meta" isLocked="0" active="1" sort="1">
+			<http-equiv>Content-Type</http-equiv>
+			<content>text/html;charset=utf-8</content>
+		</item>
+		<item type="meta" nodeName="meta" isLocked="0" active="1" sort="2">
+			<name>viewport</name>
+			<content>width=device-width, initial-scale=1.0</content>
+		</item>
+		
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reset" sort="3" css_file="/resources/css/reset.css" less_file="/resources/less/reset.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="colors" sort="3" css_file="/resources/css/colors.css" less_file="/resources/less/colors.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="typography" sort="4" css_file="/resources/css/typography.css" less_file="/resources/less/typography.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="landingpage" sort="5"  css_file="/resources/css/main.css" less_file="/resources/less/main.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="responsive" sort="6"  css_file="/resources/css/responsive.css" less_file="/resources/less/responsive.less" />
+
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie7.css" sort="7" ie="ie7" file="/resources/css/ie7.css" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie8.css" sort="8" ie="ie8" file="/resources/css/ie8.css" />
+		
+		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="main.js" sort="9" file="/resources/js/main.js" />		
+	</head>
+	
+	<settings>
+		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1"><![CDATA[1]]></setting>
+		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2"><![CDATA[1]]></setting>
+		<setting category="general" name="use_z_grid" label="Include Zesty Grid CSS for responsive layout?" type="checkbox" options="0,1"><![CDATA[1]]></setting>
+		<setting category="social-links" name="facebook" label="Facebook Link" type="text" options="" />
+		<setting category="social-links" name="twitter" label="Twitter Link" type="text" options="" />
+		<setting category="social-links" name="pinterest" label="Pinterest Link" type="text" options="" />
+		<setting category="social-links" name="google-plus" label="Google Plus Link" type="text" options="" />
+	
+	</settings>
+
+</template>

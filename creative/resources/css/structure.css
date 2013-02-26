@@ -1,0 +1,268 @@
+body {
+	background:#fff;
+}
+
+.structure {
+	max-width:990px;
+	margin:0 auto;
+}
+
+.header-container .header {
+	position:relative;
+}
+
+.header-container .header .social-links {
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+
+.header-container .header .logo {
+	float:left;
+	margin-top:50px;
+}
+
+.header-container .header .logo img {
+	padding:0;
+}
+
+ul#nav {
+	display:block;
+	float:right;
+	margin-top:100px;
+	overflow-x: hidden;
+}
+
+ul#nav li {
+	display:inline-table;
+	list-style:none;
+	margin:0;
+	padding:0;
+	line-height:0;
+	outline:0;
+}
+
+ul#nav li a {
+	text-decoration:none;
+	display:block;
+	height:36px;
+	line-height:36px;
+	font-size:12px;
+	color:#777;
+	padding:0 14px;
+	margin:0;
+	outline:0;
+	text-transform:lowercase;
+	-webkit-transition:all 250ms ease;
+	-moz-transition:all 250ms ease;
+	-o-transition:all 250ms ease;
+	transition:all 250ms ease;
+}
+
+ul#nav li a.at {
+	font-weight:700;
+}
+
+ul#nav li a:hover {
+	color:#000;
+}
+
+ul#nav li ul {
+	display:none;
+}
+
+.content-container {
+	clear:both;
+	background:#222;
+}
+
+.content-container .content {
+	min-height:424px;
+	color:#ddd;
+}
+
+.content-container .content h1,.content-container .content h2,.content-container .content h3 {
+	color:#fff;
+}
+
+.content-container .content .side-bar .widget {
+	border:1px solid #bfbfbf;
+	margin:20px;
+	padding:10px;
+	background:#ccc;
+	color:#000;
+}
+
+.content-container .content .side-bar .widget h3 a {
+	text-decoration:none;
+	color:#000;
+}
+
+.content-container .content .side-bar .widget ul {
+	margin-left:15px;
+}
+
+.content-container .content .side-bar .widget ul li a {
+	color:#444;
+	text-decoration:none;
+}
+
+.content-container .content .side-bar .widget ul li a.at {
+	font-weight:700;
+}
+
+.content-container .content .side-bar .widget ul li a:hover {
+	color:#111;
+}
+
+.content-container .content .page-content .portfolio-wrap {
+	color:#ddd;
+}
+
+.content-container .content .page-content .portfolio-wrap img.main {
+	margin-right:20px;
+}
+
+.content-container .content .category-chooser {
+	height:80px;
+}
+
+.content-container .content .category-chooser li {
+	float:left;
+	height:40px;
+	font-style:italic;
+	color:#aaa;
+	margin:0 5px;
+}
+
+.content-container .content .category-chooser li a {
+	color:#fff;
+	text-decoration:none;
+	font-size:18px;
+	font-family:'Times New Roman',serif;
+	font-style:italic;
+	margin-left:10px;
+	line-height:80px;
+	height:80px;
+	-webkit-transition:all 250ms ease;
+	-moz-transition:all 250ms ease;
+	-o-transition:all 250ms ease;
+	transition:all 250ms ease;
+}
+
+.content-container .content .category-chooser li a.at,.content-container .content .category-chooser li a:hover {
+	color:#aaa;
+}
+
+.content-container .content .portfolio-wrap {
+	padding-bottom:40px;
+}
+
+.content-container .content .portfolio-wrap h2 {
+	color:#fff;
+}
+
+.content-container .content .portfolio-wrap p {
+	color:#ddd;
+}
+
+.content-container .content .portfolio-wrap .portfolio-item {
+	height:0;
+	width:0;
+	opacity:0;
+	-webkit-transition:all 250ms ease;
+	-moz-transition:all 250ms ease;
+	-o-transition:all 250ms ease;
+	transition:all 250ms ease;
+	overflow:hidden;
+}
+
+.content-container .content .portfolio-wrap .portfolio-item.show {
+	height:280px;
+	width:220px;
+	opacity:1;
+}
+
+.content-container .content .portfolio-wrap .portfolio-item .name {
+	font-family:'Times New Roman',serif;
+	font-style:italic;
+	background:#e5e4e5;
+	color:#1d1d1d;
+}
+
+.footer-container {
+	clear:both;
+}
+
+.footer-container .footer {
+	min-height:80px;
+}
+
+.footer-container .footer .contact-footer {
+	float:right;
+}
+
+.footer-container .footer .contact-footer h3 {
+	text-align:right;
+}
+
+.copyright {
+	clear:both;
+	text-align:center;
+	font-size:11px;
+	color:#999;
+	padding-top:30px;
+}
+
+.clear,.floatfix {
+	clear:both;
+}
+
+.social-links {
+	float:right;
+	margin-top:10px;
+}
+
+.social-links li {
+	float:left;
+	height:30px;
+	width:30px;
+	margin:2px;
+}
+
+.social-links li a {
+	background-image:url(http://cdn.gozesty.com/or-social-icons.png);
+	background-size:200px;
+	display:block;
+	height:30px;
+	width:30px;
+	opacity:.6;
+	-webkit-transition:all 250ms ease;
+	-moz-transition:all 250ms ease;
+	-o-transition:all 250ms ease;
+	transition:all 250ms ease;
+}
+
+.social-links li a:hover {
+	opacity:1;
+}
+
+.social-links li a.facebook {
+	background-position:102px 62px;
+}
+
+.social-links li a.twitter {
+	background-position:66px 125px;
+}
+
+.social-links li a.linkedin {
+	background-position:66px 0;
+}
+
+.social-links li a.google-plus {
+	background-position:134px 94px;
+}
+
+.page404 {
+	text-align: center;
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<template>
+	<version>1.0</version>
+	<name>hero</name>
+	<name_friendly>Hero</name_friendly>
+	<description></description>
+	<author>The Zesty Team</author>
+	<link>http://www.gozesty.com</link>
+	<image src="https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-zesty-hero.png" />
+	<sort>8</sort>
+	<less>true</less>
+	
+	<!-- views -->
+	<views>
+		<!-- loader -->
+		<view type="loader" name="loader" file="/views/loader.tpl" />	
+		
+		<!-- header -->	
+		<view type="snippet" name="header" file="/views/header.tpl" />	
+		
+		<!-- footer -->
+		<view type="snippet" name="footer" file="/views/footer.tpl" />
+		
+		<!-- 404 page -->
+		<view type="404" name="404-page" file="/views/404.tpl" />
+		
+	</views>
+	
+	
+	<homepage>
+		<fields>
+			<field name="title" name_friendly="Lead in Title" datatype="text" required="1"  list="1"><![CDATA[Homepage]]></field>
+			<field name="content" name_friendly="Intro Text" datatype="wysiwyg_advanced"><![CDATA[<p>This is your awesome content</p>]]></field>
+		</fields>
+		
+		<view file="/views/homepage.tpl" />
+	</homepage>
+	
+	
+	<!-- blueprint -->
+	<blueprints>
+		
+		<blueprint system="jquery-slider" locked="true" />
+		
+		<blueprint system="portfolio" />
+		
+		<blueprint system="contact" />
+		
+		<blueprint system="services" />
+		
+		<!-- basic page blueprint -->
+		<blueprint system="basic-page" deactivated="" />
+		
+		<!-- blog blueprint -->
+		<blueprint system="blog" deactivated="" />
+		
+		<!-- basic blog blueprint -->
+		<blueprint system="blog-basic" deactivated="" />
+		
+	</blueprints>
+	
+	<!-- clippings -->	
+	<clippings>
+		<clipping name="site_name" name_friendly="Site Name" value="Zesty Basic Recipe" required="0" datatype="text" sort="1" locked="1" />
+		
+		<clipping name="logo" name_friendly="Site Logo" value="/media/zesty-basic-logo.png" required="0" datatype="images" sort="2" locked="1" />
+		
+		<clipping name="footer_text" name_friendly="Footer Text" value="Footer text can be updated in Content Clippings" required="0" datatype="text" sort="3" locked="0" />
+		
+		<clipping name="google_publisher_id" name_friendly="Google Publisher ID" required="0" datatype="text" sort="4" locked="0" />
+	</clippings>
+	
+
+	<!-- head files -->	
+	<head>
+		<item nodeName="html" isLocked="1" active="1" value="html5" />
+		<item type="meta" nodeName="meta" isLocked="0" active="1" sort="1">
+			<http-equiv>Content-Type</http-equiv>
+			<content>text/html;charset=utf-8</content>
+		</item>
+		<item type="meta" nodeName="meta" isLocked="0" active="1" sort="1">
+			<name>viewport</name>
+			<content>width=device-width, initial-scale=1.0</content>
+		</item>
+		
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="mixins" sort="3" less_file="/resources/less/mixins.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="reset" sort="2" css_file="/resources/css/reset.css" less_file="/resources/less/reset.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="typography" sort="3" css_file="/resources/css/typography.css" less_file="/resources/less/typography.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="structure" sort="4"  css_file="/resources/css/structure.css" less_file="/resources/less/structure.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="responsive" sort="5"  css_file="/resources/css/responsive.css" less_file="/resources/less/responsive.less" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie7.css" sort="6" ie="ie7" file="/resources/css/ie7.css" />
+		<item type="text/css" nodeName="link" isLocked="0" active="1" file_name="ie8.css" sort="7" ie="ie8" file="/resources/css/ie8.css" />
+		
+		<item type="text/javascript" nodeName="script" isLocked="0" active="1" src="http://code.jquery.com/jquery-1.8.3.min.js" sort="7" />
+		<item type="text/javascript" nodeName="script" isLocked="0" active="1" src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js" sort="8" />
+		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="main.js" sort="9" file="/resources/js/main.js" />
+		<item type="text/javascript" nodeName="script" isLocked="0" active="1" file_name="shiv.js" sort="10" file="/resources/js/shiv.js" />
+		
+	</head>
+	
+	<settings>
+		<setting category="general" name="robots_on" label="Search Engine Crawlable?" type="checkbox"  options="0,1"><![CDATA[1]]></setting>
+		<setting category="developer" name="parsley_debugger" label="Use Parsley Debugger" type="checkbox" options="1,2"><![CDATA[1]]></setting>
+		<setting category="general" name="use_z_grid" label="Include Zesty Grid CSS for responsive layout?" type="checkbox" options="0,1"><![CDATA[1]]></setting>
+	</settings>
+
+</template>

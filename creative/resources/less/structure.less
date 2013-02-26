@@ -1,0 +1,311 @@
+/*==================*
+ * Primary Elements *
+ *==================*/
+body { background: #fff; }
+
+.structure{ 
+	max-width:990px; 
+	margin:0px auto; 
+
+} // end of structure
+
+/* header container */
+.header-container{
+	
+	.header{
+	
+		position: relative;
+		
+		.social-links {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+		
+		.logo{
+			float: left;
+			margin-top: 50px;
+			
+			img{
+				padding: 0px;
+			}
+		}
+		
+	} // end of .header
+
+
+} // end of .headerContainer
+
+
+/* zesty cretaed navigation */
+ul#nav { 
+	display: block;
+	float: right;
+	margin-top: 100px;
+	
+	
+	li { 
+		display: inline-table; 
+		list-style:none;  
+		margin:0px; 
+		padding:0px; 
+		line-height:0px;
+		outline: 0;
+		
+		a { 
+			text-decoration: none; 
+			display:block; 
+			height:36px; 
+			line-height:36px; 
+			font-size: 12px; 
+			color: #777; 
+			padding: 0px 14px; 
+			margin:0px;
+			outline: 0;
+			text-transform: lowercase;
+			.transition(all 250ms ease);
+			
+			&.at {
+				font-weight: bold;
+			}
+			
+			&:hover {
+				color: #000;	
+			}
+			
+		
+		} // end of a
+		
+		
+		/* all non-top level items */
+		ul { 
+			display: none;
+		
+		
+		} // end of ul
+		
+		
+	} // end of li
+	
+	
+} // end of ul#nav
+
+
+/* content container */
+.content-container {
+	clear: both;
+	background: #222222;
+	
+	.content{
+		min-height: 424px;
+		color: #ddd;
+		
+		h1, h2, h3 {
+			color: #fff;
+		}
+		
+		.side-bar {
+				
+			.widget {
+				border: 1px solid darken(#ccc, 5%);
+				margin: 20px;
+				padding: 10px;
+				background: #ccc;
+				color: black;
+				
+				h3 {
+					
+					a {
+						text-decoration: none;
+						color: #000;
+					}
+				}
+				
+				ul {
+					margin-left: 15px;
+					
+					li {
+						
+						a {
+							color: #444;
+							text-decoration: none;
+							
+							&.at {
+								font-weight: bold;
+							}
+							
+							&:hover {
+								color: #111;	
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		.page-content {
+			.portfolio-wrap {
+				color: #ddd;
+				
+				img.main {
+					margin-right: 20px;	
+				}
+			}
+		}
+		
+		.category-chooser {
+			height: 80px;
+			
+			li {
+				float: left;
+				height: 40px;
+				font-style: italic;
+				color: #aaa;
+				margin: 0px 5px;
+				
+				a {
+					color: #fff;
+					text-decoration: none;
+					font-size: 18px;
+					font-family: 'Times New Roman', serif;
+					font-style: italic;
+					margin-left: 10px;
+					line-height: 80px;
+					height: 80px;
+					.transition(all 250ms ease);
+					
+					&.at, &:hover {
+						color: #aaa;	
+					}
+				}
+				
+			}
+		}
+		
+		.portfolio-wrap {
+			padding-bottom: 40px;
+			
+			h2 {
+				color: #fff;
+			}
+			
+			p {
+				color: #ddd;
+			}
+			
+			.portfolio-item {
+				height: 0px;
+				width: 0px;
+				opacity: 0;
+				.transition(all 250ms ease);
+				overflow: hidden;
+				
+				&.show {
+					height: 280px;
+					width: 220px;
+					opacity: 1;
+				}
+				
+				.name {
+					font-family: 'Times New Roman', serif;
+					font-style: italic;
+					background: #E5E4E5;
+					color: #1D1D1D;
+				}
+			
+			}
+		}
+		
+	} // end of .content
+	
+
+} // end of .contentContainer
+
+
+/* footer container */
+.footer-container {
+	clear: both;
+	
+	.footer{ 
+		min-height: 80px;
+		
+		.contact-footer {
+			float: right;
+			
+			h3 {
+				text-align: right;	
+			}
+			
+		}
+	} // end of .footer
+	
+	
+} // end of .footerContainer
+
+/* footer copyright */
+.copyright {
+	clear: both; 
+	text-align: center; 
+	font-size: 11px; 
+	color: #999; 
+	padding-top: 30px; 
+}
+
+// clear
+
+.clear,.floatfix{ clear:both}
+
+.social-links {
+	float: right;
+	margin-top: 10px;
+	
+	li {
+		//display: inline-table;
+		float: left;
+		height: 30px;
+		width: 30px;
+		margin: 2px;
+		
+		a {
+			background-image: url(http://cdn.gozesty.com/or-social-icons.png);
+			background-size: 200px;
+			display: block;
+			height: 30px;
+			width: 30px;
+			opacity: .6;
+			.transition(all 250ms ease);
+			
+			&:hover {
+				opacity: 1;
+			}
+			
+			&.facebook {
+				background-position: 102px 62px;	
+			}
+			
+			&.twitter {
+				background-position: 66px 125px;	
+			}
+			
+			&.linkedin {
+				background-position: 66px 0px;	
+			}
+			
+			&.google-plus {
+				background-position: 134px 94px;	
+			}
+			
+			&.rss-feed {
+				
+			}
+		}
+		
+	}
+	
+}
+
+
+.page404 {
+	text-align: center;
+}
+	
